@@ -1,0 +1,30 @@
+.grid-container {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-item {
+  background-color: hsl(0, 95%, 51%);
+  padding: 20px;
+  text-align: center;
+  border: 1px solid hsl(0, 41%, 37%);
+}
+
+
+.item1 {
+  grid-column: span 2;
+}
+
+.item2 {
+  grid-row: span 2;
+}
+
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
